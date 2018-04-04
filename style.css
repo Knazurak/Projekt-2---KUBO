@@ -19,3 +19,12 @@ a {
   padding: 20px;
   color: #000000;
 }
+
+.container {
+    border-radius: 5px;
+    float: left;
+    background-color: white;
+    padding: 20px;
+    margin-top: 18px;
+    border: 1px solid blue;
+}
