@@ -1,21 +1,31 @@
 html, body {
-
 }
-
-nav {
+.header {
+  padding: 20px;
+}
+.topnav {
   margin: auto;
-  float: right;
+  text-align: right;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-li {
+.topnav li {
   display: inline;
 }
-a {
+.topnav img {
+  float: left;
+  width: 50px;
+}
+.topnav a {
   text-decoration: none;
   padding: 20px;
-  color: #000000;
+  color: #216393;
+}
+.topnav a.active {
+  text-decoration: underline;
+}
+.banner {
+  height: 1px;
+  width: 100%;
+  border: 0px 0px 25px 0px;
+  border-color: #216393;
+  background-color: #216393;
 }
