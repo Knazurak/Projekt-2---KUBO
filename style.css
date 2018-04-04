@@ -1,1 +1,21 @@
+html, body {
 
+}
+
+nav {
+  margin: auto;
+  float: right;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+a {
+  text-decoration: none;
+  padding: 20px;
+  color: #000000;
+}
