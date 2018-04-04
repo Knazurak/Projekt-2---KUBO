@@ -29,3 +29,12 @@ html, body {
   border-color: #216393;
   background-color: #216393;
 }
+
+.container {
+    border-radius: 5px;
+    float: left;
+    background-color: white;
+    padding: 20px;
+    margin-top: 18px;
+    border: 1px solid blue;
+}
