@@ -6,6 +6,7 @@ html, body {
 .topnav {
   margin: auto;
   text-align: right;
+  overflow: hidden;
 }
 .topnav li {
   display: inline;
@@ -28,6 +29,37 @@ html, body {
   border: 0px 0px 25px 0px;
   border-color: #216393;
   background-color: #216393;
+}
+/* Nav dropdown */
+.dropdown {
+    float: right;
+    display: inline-block;
+}
+.dropdown .dropbutton {
+    background-color: #ffffff;
+    color: #216393;
+    padding: 10px;
+    border: solid 1px #216393;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 20px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+.show {
+  display: block;
 }
 
 .container {

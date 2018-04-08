@@ -12,11 +12,20 @@
       <li><a class="active" href="dashboard.html">Dashboard</a></li>
       <li><a href="lessonplans.html">LessonPlans</a></li>
       <li><a href="social.html">Social</a></li>
+      <div class="dropdown">
+        <button class="dropbutton"
+    onclick="myFunction()">User
+    </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="login.html">Log Ud</a>
+        </div>
+      </div>
+
   </div>
 </div>
 <div class="banner">
 </div>
-  </body>
+
 
     </ul>
   </nav>
@@ -30,6 +39,25 @@
     <li><a href="faq.html" >FAQ<a></li>
   </footer>
 
-</body>
+  
+  <script>
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbutton')) {
 
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+</body>
 </html>
