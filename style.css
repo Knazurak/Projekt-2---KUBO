@@ -130,5 +130,8 @@ html, body {
    bottom: 0;
    width: 100%;
    background-color: black;
-   color: white;
    text-align: center;
+   list-style-type: none;
+   
+
+ }
