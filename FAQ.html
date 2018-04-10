@@ -7,24 +7,53 @@
   </head>
   <body>
     <div class="header">
-  <div class="topnav">
-      <li><a href="Dashboard.html"> <img src="media/KEDU-blaa-350.png" alt="logo"></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
+<div class="topnav">
+      <li><a href="Dashboard.html"><img src="media/KEDU-blaa-350.png" alt="logo"></li>
+      <li><a class="active" href="dashboard.html">Dashboard</a></li>
       <li><a href="lessonplans.html">LessonPlans</a></li>
       <li><a href="social.html">Social</a></li>
+      <div class="dropdown">
+        <button class="dropbutton"
+    onclick="myFunction()">User
+    </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="login.html">Log Ud</a>
+        </div>
+      </div>
 
   </div>
-  </div>
-  <div class="banner">
-  </div>
-  <div class="footer">
+</div>
+<div class="banner">
+</div>
+
+
+  <div class="footer"
   <footer>
     <li><a href="Dashboard.html" >Dashboard<a></li>
     <li><a href="lessonplans.html" >Lessonplans<a></li>
-      <li><a href="social.html" >Social<a></li>
+    <li><a href="social.html" >Social<a></li>
     <li><a href="contact.html" >Contact<a></li>
     <li><a href="faq.html" >FAQ<a></li>
   </footer>
-</div>
+
+  <script>
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbutton')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
   </body>
 </html>
