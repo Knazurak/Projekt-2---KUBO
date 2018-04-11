@@ -1,7 +1,12 @@
 html, body {
+
+
 }
 .header {
   padding: 20px;
+  font-family: 'Cabin Sketch', bold;
+  font-size: 25px;
+  color: #216393;
 }
 .topnav {
   margin: auto;
@@ -13,7 +18,8 @@ html, body {
 }
 .topnav img {
   float: left;
-  width: 100px;
+  width: 125px;
+  padding: 10px;
 }
 .topnav a {
   text-decoration: none;
@@ -24,39 +30,41 @@ html, body {
   text-decoration: underline;
 }
 .banner {
-  height: 1px;
+  height: 3px;
   width: 100%;
   border: 0px 0px 25px 0px;
   border-color: #216393;
   background-color: #216393;
 }
 /* TopNav dropdown */
-.dropdown {
-    float: right;
-    display: inline-block;
-}
-.dropdown .dropbutton {
+
+.dropbutton {
     background-color: #ffffff;
     color: #216393;
-    padding: 10px;
-    border: solid 1px #216393;
+    padding: 15px 25px 15px 25px;
+    border: solid 3px #216393;
     cursor: pointer;
+    font-family: 'Cabin Sketch', bold;
+    font-size: 25px;
+}
+.dropdown {
+    display: inline-block;
 }
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 20px;
-    overflow: auto;
+    background-color: #ffffff;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 .dropdown-content a {
-    color: black;
+    color: #216393;
     padding: 10px;
     text-decoration: none;
     text-align: center;
     display: block;
+    font-family: 'Lato', sans-serif, black;
+    font-size: 20px;
 }
 .show {
   display: block;
@@ -84,7 +92,7 @@ input[type-submit]:hover{
   background-color: #216393;
 }
 .container {
-    border-radius: 5px;
+    border-radius: 20px;
     float: center;
     background-color: white;
     padding: 20px;
@@ -94,9 +102,9 @@ input[type-submit]:hover{
 
 .grid-container {
     display: grid;
-    grid-column-gap: 25px;
+    grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-left: 250px;
     padding-right: 250px;
 }
@@ -106,13 +114,15 @@ input[type-submit]:hover{
   margin-top: 10px;
   border: 3px solid #216393;
   padding: 10px;
-
+  font-family: 'Lato', sans-serif, black;
+  color: #216393;
 }
 
 .headline {
-  font-size: 20px;
+  font-size: 25px;
   color: #216393;
   text-align: center;
+  font-family: 'Cabin Sketch', bold;
 }
 
 /* Login Style */
