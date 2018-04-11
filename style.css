@@ -88,8 +88,7 @@ input[type-submit]:hover{
     float: center;
     background-color: white;
     padding: 20px;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin: 50px 250px 25px 250px;
     border: 3px solid #216393;
 }
 
