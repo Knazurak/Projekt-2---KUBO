@@ -78,6 +78,7 @@ input[type=text], select, textarea{
   margin-top: 6px;
   margin-bottom:16px;
   border: 3px solid #216393;
+  font-family: 'Lato', sans-serif, black;
 }
 input[type=submit]{
   background-color: white;
@@ -86,8 +87,9 @@ input[type=submit]{
   border-color: #216393;
   border-radius: 4px;
   cursor:pointer;
+  font-family: 'Cabin Sketch', bold;
+  font-size: 20px;
 }
-
 input[type-submit]:hover{
   background-color: #216393;
 }
@@ -98,6 +100,8 @@ input[type-submit]:hover{
     padding: 20px;
     margin: 50px 250px 25px 250px;
     border: 3px solid #216393;
+    font-family: 'Cabin Sketch', bold;
+    font-size: 20px;
 }
 
 .grid-container {
@@ -114,8 +118,7 @@ input[type-submit]:hover{
   margin-top: 10px;
   border: 3px solid #216393;
   padding: 10px;
-  font-family: 'Lato', sans-serif, black;
-  color: #216393;
+
 }
 
 .headline {
@@ -124,7 +127,10 @@ input[type-submit]:hover{
   text-align: center;
   font-family: 'Cabin Sketch', bold;
 }
-
+.text {
+font-family: 'Lato', sans-serif, black;
+color: #216393;
+}
 /* Login Style */
 .modal {
     display: none;
