@@ -36,13 +36,22 @@
 </div>
 
 <div class="container">
-<p class="headline">FREQUENTLY ASKED QUESTIONS:</p>
-<p class="text"><b>Questions about KUBO<br/><br/><br/>
-Questions about KEDU<br/><br/><br/>
-Questions about lessons
-</b><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/></p>
-</div>
+  <h2>Frequently Asked Question</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for question..." title="Type in a name">
+
+    <ul id="myUL">
+      <li><a href="#">How to add a note?</a></li>
+      <li><a href="#">How to add a file?</a></li>
+
+      <li><a href="#">What is KEDU?</a></li>
+      <li><a href="#">What is KUBO?</a></li>
+
+      <li><a href="#">Is the schedule server down?</a></li>
+      <li><a href="#">How can I contact KEDU?</a></li>
+      <li><a href="#">Can i change my code?</a></li>
+    </ul>
+  </div>
 
 <div class="footer">
   <p> © KEDU 2018</p>
@@ -65,7 +74,24 @@ Questions about lessons
       }
     }
   }
-  </script>
+  
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
 
   </body>
 </html>
