@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Schedule</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+<div class="topnav">
+
+      <a href="dashboard.html"><img src="media/KEDU-blaa-350.png" alt="logo"></a>
+        <a href="dashboard.html">DASHBOARD</a>
+        <a class="active" href="schedule.html">SCHEDULE</a>
+        <a href="social.html">SOCIAL</a>
+        <a href="faq.html">FAQ</a>
+    <a href="contact.html">CONTACT</a>
+      <div class="dropdown">
+        <button class="dropbutton"
+    onclick="myFunction()">User
+    </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#link">Settings</a>
+          <a href="#link">Help</a>
+          <a href="#link">Feedback</a>
+          <a href="index.html">Log Out</a>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+<div class="banner">
+</div>
+
+
+<div class="container">
+  <p class="headline">Edit Lesson</p>
+
+    <form>
+  <input id="item" type="text" placeholder="Add activity, homework, notes etc. onto the list below.." required>
+</form>
+
+<p class="text"><b>Your notes:</b>
+<ul class="list"></ul>
+</div>
+
+<script>
+const form = document.querySelector('form');
+const ul = document.querySelector('ul');
+const input = document.getElementById('item');
+let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('wednesdayeng')) : [];
+
+localStorage.setItem('items', JSON.stringify(itemsArray));
+const data = JSON.parse(localStorage.getItem('items'));
+
+const liMaker = (text) => {
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  itemsArray.push(input.value);
+  localStorage.setItem('wednesdayeng', JSON.stringify(itemsArray));
+  liMaker(input.value);
+  input.value = "";
+});
+
+data.forEach(item => {
+  liMaker(item);
+});
+
+
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbutton')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
