@@ -51,10 +51,10 @@
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const input = document.getElementById('item');
-let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('tuesdayeng')) : [];
+let itemsArray = localStorage.getItem('tuesdayeng') ? JSON.parse(localStorage.getItem('tuesdayeng')) : [];
 
 localStorage.setItem('items', JSON.stringify(itemsArray));
-const data = JSON.parse(localStorage.getItem('items'));
+const data = JSON.parse(localStorage.getItem('tuesdayeng'));
 
 const liMaker = (text) => {
   const li = document.createElement('li');

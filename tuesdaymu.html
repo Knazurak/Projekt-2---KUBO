@@ -40,7 +40,7 @@
   <p class="headline">Edit Lesson</p>
 
     <form>
-  <input id="" type="text" placeholder="Add activity, homework, notes etc. onto the list below.." required>
+  <input id="item" type="text" placeholder="Add activity, homework, notes etc. onto the list below.." required>
 </form>
 
 <p class="text"><b>Your notes:</b>
@@ -51,10 +51,10 @@
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const input = document.getElementById('item');
-let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('tuesdaymu')) : [];
+let itemsArray = localStorage.getItem('tuesdaymu') ? JSON.parse(localStorage.getItem('tuesdaymu')) : [];
 
 localStorage.setItem('items', JSON.stringify(itemsArray));
-const data = JSON.parse(localStorage.getItem('items'));
+const data = JSON.parse(localStorage.getItem('tuesdaymu'));
 
 const liMaker = (text) => {
   const li = document.createElement('li');
